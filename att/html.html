@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoRecicla | Reduza, Reutilize, Recicle</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Inter', sans-serif; background: #f0fdf4; color: #1e3a1e; }
+    header { background: #065f46; color: white; padding: 4rem 1rem; text-align: center; }
+    header h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    header p { font-size: 1.2rem; }
+    nav { background: white; padding: 1rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav a.logo { font-weight: bold; color: #065f46; text-decoration: none; }
+    nav .links a { margin: 0 1rem; text-decoration: none; color: #1e3a1e; }
+    .section { padding: 3rem 1rem; max-width: 1000px; margin: auto; }
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .card { background: white; border-radius: 12px; padding: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+    .card h3 { margin-top: 0; color: #065f46; }
+    .impact-bar { background: #d1fae5; border-radius: 4px; overflow: hidden; height: 10px; margin-top: 1rem; }
+    .impact-fill { height: 100%; background: #10b981; width: 50%; }
+    .calculator { background: white; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; align-items: flex-start; gap: 2rem; }
+    .calculator-form { width: 100%; }
+    .calculator label, .calculator output { display: block; margin: 1rem 0; }
+    .calculator-image { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .calculator-image img { width: 100px; border-radius: 8px; display: none; }
+    .map-section iframe { width: 100%; height: 500px; border: none; border-radius: 12px; }
+    .map-link { display: block; margin-top: 1rem; text-align: center; }
+    .map-link a { color: #065f46; font-weight: bold; text-decoration: none; }
+    .map-link a:hover { text-decoration: underline; }
+    footer { background: #065f46; color: white; text-align: center; padding: 2rem 1rem; margin-top: 3rem; }
+    .conscientizacao {
+      background-color: #e8f5e9; border-left: 5px solid #4CAF50; padding: 1rem; margin-bottom: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a class="logo" href="#"><i class="fas fa-recycle"></i> EcoRecicla</a>
+    <div class="links">
+      <a href="#comparacoes">Comparações</a>
+      <a href="#calculadora">Calculadora</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Transforme o Lixo em Soluções Sustentáveis</h1>
+    <p>Descubra como a reciclagem pode mudar o futuro do planeta.</p>
+  </header>
+
+  <div class="conscientizacao">
+    <h2>Conscientize-se</h2>
+    <p>
+      Cada pequena atitude conta. Separar o lixo corretamente e destinar recicláveis para os locais certos ajuda a proteger o meio ambiente, economizar recursos e construir um futuro mais sustentável para todos. Faça sua parte!
+    </p>
+  </div>
+  <section id="comparacoes" class="section">
+    <h2>Comparações de Impacto</h2>
+    <div class="comparison">
+      <div class="card">
+        <h3>Lixo Orgânico no Lixão</h3>
+        <p>Contribui com emissões de metano e sobrecarga de aterros sanitários.</p>
+        <div class="impact-bar"><div class="impact-fill" style="width: 90%"></div></div>
+      </div>
+      <div class="card">
+        <h3>Compostagem Doméstica</h3>
+        <p>Reduz emissões e transforma resíduos em adubo natural.</p>
+        <div class="impact-bar"><div class="impact-fill" style="width: 10%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="calculadora" class="section">
+    <h2>Calculadora de Impacto</h2>
+    <div class="calculator">
+      <div class="calculator-form">
+        <label for="plastico">Garrafas PET descartadas por semana:</label>
+        <input type="range" id="plastico" min="0" max="50" value="10" oninput="plasticoOut.value = this.value">
+        <output id="plasticoOut">10</output>
+        <label>Total estimado de plástico evitado por ano:</label>
+        <output id="resultado">520 garrafas</output>
+      </div>
+      <div class="calculator-image">
+        <img id="img10" src="https://images.freeimages.com/image/thumbs/6ae/plastic-trash-png-icon-art-5698450.png" alt="Imagem 10 garrafas">
+        <img id="img25" src="https://images.vexels.com/media/users/3/298420/isolated/preview/9ad408b4d825ab7f51286a38e0c38cec-grande-saco-de-lixo-roxo.png" alt="Imagem 25 garrafas">
+        <img id="img40" src="https://cdn.discordapp.com/attachments/1327336894043783343/1371990243104002192/ilustracao-de-sacos-de-lixo_25030-78599.png?ex=682524fc&is=6823d37c&hm=2538507ba48d066a01b75edf0b1d5ebffb14da0d2e3b6e40f7e37a4e94b33b1f&" alt="Imagem 40 garrafas">
+      </div>
+    </div>
+  </section>
+
+  <section id="mapa" class="section map-section">
+    <h2>Mapa dos Ecopontos de Bauru</h2>
+    <p>Confira abaixo os locais de coleta seletiva e descarte correto em Bauru-SP:</p>
+    <iframe src="https://www2.bauru.sp.gov.br/arquivos/sist_noticias/42179/img_42179_1.jpeg" allowfullscreen></iframe>
+    <div class="map-link">
+      <a href="https://www.google.com/maps/search/mapa+de+reciclaveis+bauru/@-22.3281603,-49.1033175,9340m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMS4wIKXMDSoJLDEwMjExNDUzSAFQAw%3D%3D" target="_blank">
+        ➤ Ver no Google Maps
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 EcoRecicla. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    const plastico = document.getElementById('plastico');
+    const resultado = document.getElementById('resultado');
+    const img10 = document.getElementById('img10');
+    const img25 = document.getElementById('img25');
+    const img40 = document.getElementById('img40');
+
+    function atualizarResultado() {
+      const valor = parseInt(plastico.value);
+      const total = valor * 52;
+      resultado.textContent = `${total} garrafas`;
+
+      img10.style.display = valor >= 10 ? 'inline-block' : 'none';
+      img25.style.display = valor >= 25 ? 'inline-block' : 'none';
+      img40.style.display = valor >= 40 ? 'inline-block' : 'none';
+    }
+
+    plastico.addEventListener('input', atualizarResultado);
+    window.addEventListener('DOMContentLoaded', atualizarResultado);
+  </script>
+</body>
+</html>
